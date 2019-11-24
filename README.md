@@ -1,4 +1,4 @@
-### ReactRedux-Starter ###
+### Find a movie ###
 
 Pour installer le projet se placer dans le projet et lancer : 
 
