@@ -1,2 +1,9 @@
-# Find-a-movie
-find a movie and watch some trailers
+### ReactRedux-Starter ###
+
+Pour installer le projet se placer dans le projet et lancer : 
+
+```
+> npm install
+> npm start
+```
+
