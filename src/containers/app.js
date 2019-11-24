@@ -31,12 +31,11 @@ class App extends Component {
    applyVideoToCurrentMovie(){
       axios.get(`${API_END_POINT}movie/${this.state.currentMovie.id}?${API_KEY}&append_to_response=videos&include_adult=false`).then(function (response) {
          const youtubeKey = response.data.videos.results[0].key;
-         console.log("key youtube" ,youtubeKey)
-         console.log("response", response)
          let newCurrentMovieState = this.state.currentMovie;
          newCurrentMovieState.videoId = youtubeKey;
+         console.log("key youtube" ,youtubeKey)
          this.setState({currentMovie : newCurrentMovieState});
-
+         console.log(newCurrentMovieState)
       }.bind(this));
    }
 
@@ -59,7 +58,7 @@ class App extends Component {
             </div>
             <div className="row">
                <div className="col-md-8">
-                  <Video videoId={this.state.videoId} />
+                  <Video videoId={this.state.currentMovie.videoId} />
                </div>
                <div className="col-md-4">
                   {renderVideoList()}
