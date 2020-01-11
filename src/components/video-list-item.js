@@ -17,7 +17,6 @@ const VideoListItem = (props) => {
       </li>
    );
    function handleOnClick () {
-      console.log("click", movie)
       props.callback(movie);
    }
 };

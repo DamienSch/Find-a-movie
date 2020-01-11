@@ -8,15 +8,14 @@ const VideoList = (props) => {
          <ul>
             {
                movieList.map(movie => {
-                  return <VideoListItem key={movie.id} movie={movie} callback={getCallBack}/>
+                  return <VideoListItem key={movie.id} movie={movie} callback={onClickListItem}/>
                })
             }
          </ul>
       </div>
    );
-   function getCallBack(movie){
+   function onClickListItem(movie){
       props.callback(movie);
-      console.log("parent : " + movie);
    }
 };
 
